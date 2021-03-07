@@ -15,13 +15,13 @@ a {
     text-decoration: none;
 }
 
-
 .container {
     min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fadein 2s;
 }
 
 .wrapper {
@@ -43,7 +43,7 @@ a {
     backdrop-filter: blur(6px);
 }
 
-/* Hero Section */
+// Hero Section
 
 #anim {
     max-width: 960px;
@@ -53,30 +53,27 @@ a {
 #hero {
     position: relative;
     color: white;
-}
 
-#hero h1 {
-    display: block;
-    width: fit-content;
-    font-size: 4rem;
-    position: relative;
-}
+    h1 {
+        display: block;
+        width: fit-content;
+        font-size: 4rem;
+        position: relative;
+    }
 
-#hero h2 {
-    display: block;
-    width: fit-content;
-    font-size: 3rem;
-    position: relative;
-}
+    h2 {
+        display: block;
+        width: fit-content;
+        font-size: 3rem;
+        position: relative;
+    }
 
-#hero h3 {
-    display: block;
-    width: fit-content;
-    font-size: 2rem;
-    position: relative;
-    transition: color .5s ease;
-    opacity: 0;
-    animation: fade-in-right ease 0.4s forwards;
+    h3 {
+        display: block;
+        width: fit-content;
+        font-size: 2rem;
+        position: relative;
+    }
 }
 
 #hero .cta {
@@ -99,13 +96,8 @@ a {
     padding: 20px 45px;
 }
 
-@keyframes fade-in-right {
-    from {
-      opacity: 0;
-      transform: translateX(-15px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+// Keyframes
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

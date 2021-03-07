@@ -11,10 +11,10 @@ const sass_src_url = 'src/scss/**/*.scss',
       html_dist_url = 'dist/*.html';
 
 function compileSass(cb) {
-    src(sass_src_url)
+    return src(sass_src_url)
         .pipe(sass().on('error', sass.logError))
-        .pipe(dest(css_dist_url));
-    cb();
+        .pipe(dest(css_dist_url))
+        .pipe(sync.stream());
 }
 
 function lintJs(cb) {
@@ -38,7 +38,7 @@ function watching(cb) {
     minify(cb);
     sync.init({
         server: {
-            baseDir: "./dist"
+            baseDir: "dist"
         }
     });
     watch(sass_src_url, compileSass);
