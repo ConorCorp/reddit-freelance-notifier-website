@@ -1,0 +1,1 @@
+const animation=bodymovin.loadAnimation({container:document.getElementById("anim"),path:"images/website-revolver.json",renderer:"svg",loop:!0,autoplay:!0,name:"Website Revolver"});
