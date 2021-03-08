@@ -5,7 +5,7 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 10px;
+  font-size: 62.5%;
   font-family: 'Montserrat', sans-serif;
   color: white;
   background-color: #202124; }
@@ -20,6 +20,18 @@ h2 {
   font-size: 3rem; }
 
 h3 {
+  font-size: 2.34rem; }
+
+h4 {
+  font-size: 2.24rem; }
+
+h5 {
+  font-size: 1.66rem; }
+
+h6 {
+  font-size: 1.5rem; }
+
+body {
   font-size: 2rem; }
 
 .container {
@@ -48,25 +60,25 @@ h3 {
   height: 100vh;
   animation: fadein 2s;
   padding: 0 5%;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr)); }
 
 #hero .cta {
   display: inline-block;
-  padding: 10px 30px;
+  padding: 1rem 3rem;
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
-  border: 2px solid white;
+  border: .2rem solid white;
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
-  margin-top: 30px;
+  margin-top: 3rem;
   transition: .5s ease;
   transition-property: background-color, color, padding; }
 
 #hero .cta:hover {
   color: white;
   background-color: crimson;
-  padding: 20px 45px; }
+  padding: 2rem 4.5rem; }
 
 #email-ribbon .container {
   min-height: 25vh;
@@ -77,19 +89,19 @@ h3 {
   justify-content: center; }
 
 #email-ribbon input {
-  min-width: 300px;
-  margin: 0px 10px;
+  min-width: 30rem;
+  margin: 0 1rem;
   width: 25%;
-  padding: 12px 20px;
-  border: 2px solid crimson; }
+  padding: 1.2rem 2rem;
+  border: .2rem solid crimson; }
 
 #email-ribbon .subscribe-button {
   margin: 0;
   flex-wrap: wrap;
-  padding: 10px 30px;
+  padding: 1rem 3rem;
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
-  border: 2px solid purple;
+  border: .2rem solid purple;
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: .1rem; }
