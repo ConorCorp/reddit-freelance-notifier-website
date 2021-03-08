@@ -43,7 +43,7 @@ body {
 .parallax-bg {
   background-image: url("../images/bg.jpg");
   justify-content: center;
-  max-width: 1920px;
+  max-width: 192rem;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -81,19 +81,37 @@ body {
   padding: 2rem 4.5rem; }
 
 #email-ribbon .container {
-  min-height: 25vh;
+  padding: 5% 5%;
+  min-height: 30vh;
   animation: fadein 2.3s;
-  background-color: white;
+  background: #ff9966;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
+
+#email-ribbon h2 {
+  margin: 0 1rem 0 0; }
 
 #email-ribbon input {
   min-width: 30rem;
   margin: 0 1rem;
   width: 25%;
   padding: 1.2rem 2rem;
-  border: .2rem solid crimson; }
+  border: .1rem solid black;
+  letter-spacing: .2rem;
+  background-color: rgba(255, 255, 255, 0.3); }
+
+#email-ribbon input::placeholder {
+  color: rgba(53, 53, 53, 0.7); }
+
+#email-ribbon input:focus {
+  outline: none;
+  box-shadow: 0.5rem 0.5rem 0.2rem rgba(0, 0, 0, 0.3); }
 
 #email-ribbon .subscribe-button {
   margin: 0;
@@ -101,7 +119,6 @@ body {
   padding: 1rem 3rem;
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
-  border: .2rem solid purple;
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: .1rem; }
