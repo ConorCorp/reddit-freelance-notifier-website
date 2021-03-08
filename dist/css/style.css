@@ -13,13 +13,20 @@ html {
 a {
   text-decoration: none; }
 
+h1 {
+  font-size: 4rem; }
+
+h2 {
+  font-size: 3rem; }
+
+h3 {
+  font-size: 2rem; }
+
 .container {
-  min-height: 100vh;
   width: 100%;
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: center;
-  animation: fadein 2s; }
+  justify-content: center; }
 
 .parallax-bg {
   background-image: url("../images/bg.jpg");
@@ -38,19 +45,10 @@ a {
   backdrop-filter: brightness(10%); }
 
 #hero .container {
-  display: grid;
-  align-items: center;
+  height: 100vh;
+  animation: fadein 2s;
   padding: 0 5%;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-
-#hero h1 {
-  font-size: 4rem; }
-
-#hero h2 {
-  font-size: 3rem; }
-
-#hero h3 {
-  font-size: 2rem; }
 
 #hero .cta {
   display: inline-block;
@@ -70,8 +68,31 @@ a {
   background-color: crimson;
   padding: 20px 45px; }
 
-#hero #anim {
-  position: relative; }
+#email-ribbon .container {
+  min-height: 25vh;
+  animation: fadein 2.3s;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+#email-ribbon input {
+  min-width: 300px;
+  margin: 0px 10px;
+  width: 25%;
+  padding: 12px 20px;
+  border: 2px solid crimson; }
+
+#email-ribbon .subscribe-button {
+  margin: 0;
+  flex-wrap: wrap;
+  padding: 10px 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid purple;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem; }
 
 @keyframes fadein {
   from {

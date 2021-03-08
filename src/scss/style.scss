@@ -17,13 +17,24 @@ a {
     text-decoration: none;
 }
 
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
 .container {
-    min-height: 100vh;
     width: 100%;
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
-    animation: fadein 2s;
 }
 
 .parallax-bg {
@@ -52,22 +63,18 @@ a {
 #hero {
 
     .container {
-        display: grid;
-        align-items: center;
+        height: 100vh; //is this gonna get wonky
+        animation: fadein 2s;
         padding: 0 5%;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));        
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 
-    h1 {
-        font-size: 4rem;
+    #anim {
+        // min-width: 720px;
     }
-
-    h2 {
-        font-size: 3rem;
-    }
-
-    h3 {
-        font-size: 2rem;
+    
+    #banner {
+        // padding: 50px 0;
     }
 
     .cta {
@@ -90,11 +97,39 @@ a {
         padding: 20px 45px;
     }
 
-    #anim {
-        position: relative;
-        // min-width: 720px;
+}
+
+#email-ribbon {
+
+    .container {
+        min-height: 25vh;
+        animation: fadein 2.3s;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
+    input {
+        min-width: 300px;
+        margin: 0px 10px;
+        width: 25%;
+        padding: 12px 20px;
+        border: 2px solid crimson;
+
+    }
+
+    .subscribe-button {
+        margin: 0;
+        flex-wrap: wrap;
+        padding: 10px 30px;
+        color: white;
+        background-color: rgba(0, 0, 0, .2);
+        border: 2px solid purple;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+    }
 }
 
 // Keyframes
