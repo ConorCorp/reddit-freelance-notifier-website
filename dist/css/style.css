@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box; }
 
 html {
   font-size: 10px;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background-color: #202124; }
 
 a {
   text-decoration: none; }
@@ -19,12 +21,10 @@ a {
   justify-content: center;
   animation: fadein 2s; }
 
-.wrapper {
-  overflow-x: hidden;
-  overflow-y: auto; }
-
 .parallax-bg {
   background-image: url("../images/bg.jpg");
+  justify-content: center;
+  max-width: 1920px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -34,35 +34,30 @@ a {
 .blur-bg {
   backdrop-filter: blur(6px); }
 
-#anim {
-  max-width: 960px;
-  margin: 0 auto; }
+.darken-bg {
+  backdrop-filter: brightness(10%); }
 
-#hero {
-  position: relative;
-  color: white; }
-  #hero h1 {
-    display: block;
-    width: fit-content;
-    font-size: 4rem;
-    position: relative; }
-  #hero h2 {
-    display: block;
-    width: fit-content;
-    font-size: 3rem;
-    position: relative; }
-  #hero h3 {
-    display: block;
-    width: fit-content;
-    font-size: 2rem;
-    position: relative; }
+#hero .container {
+  display: grid;
+  align-items: center;
+  padding: 0 5%;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+#hero h1 {
+  font-size: 4rem; }
+
+#hero h2 {
+  font-size: 3rem; }
+
+#hero h3 {
+  font-size: 2rem; }
 
 #hero .cta {
   display: inline-block;
   padding: 10px 30px;
-  color: crimson;
-  background-color: transparent;
-  border: 2px solid crimson;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid white;
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
@@ -74,6 +69,9 @@ a {
   color: white;
   background-color: crimson;
   padding: 20px 45px; }
+
+#hero #anim {
+  position: relative; }
 
 @keyframes fadein {
   from {

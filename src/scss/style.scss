@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
 }
@@ -9,6 +9,8 @@
 html {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: #202124;
 }
 
 a {
@@ -24,13 +26,11 @@ a {
     animation: fadein 2s;
 }
 
-.wrapper {
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
 .parallax-bg {
     background-image: url("../images/bg.jpg");
+
+    justify-content: center;
+    max-width: 1920px;
   
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -43,60 +43,62 @@ a {
     backdrop-filter: blur(6px);
 }
 
+.darken-bg {
+    backdrop-filter: brightness(10%);
+  }
+
 // Hero Section
 
-#anim {
-    max-width: 960px;
-    margin: 0 auto;
-}
-
 #hero {
-    position: relative;
-    color: white;
+
+    .container {
+        display: grid;
+        align-items: center;
+        padding: 0 5%;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));        
+    }
 
     h1 {
-        display: block;
-        width: fit-content;
         font-size: 4rem;
-        position: relative;
     }
 
     h2 {
-        display: block;
-        width: fit-content;
         font-size: 3rem;
-        position: relative;
     }
 
     h3 {
-        display: block;
-        width: fit-content;
         font-size: 2rem;
-        position: relative;
     }
-}
 
-#hero .cta {
-    display: inline-block;
-    padding: 10px 30px;
-    color: crimson;
-    background-color: transparent;
-    border: 2px solid crimson;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    margin-top: 30px;
-    transition: .5s ease;
-    transition-property: background-color, color, padding;
-}
+    .cta {
+        display: inline-block;
+        padding: 10px 30px;
+        color: white;
+        background-color: rgba(0, 0, 0, .2);
+        border: 2px solid white;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        margin-top: 30px;
+        transition: .5s ease;
+        transition-property: background-color, color, padding;
+    }
 
-#hero .cta:hover {
-    color: white;
-    background-color: crimson;
-    padding: 20px 45px;
+    .cta:hover {
+        color: white;
+        background-color: crimson;
+        padding: 20px 45px;
+    }
+
+    #anim {
+        position: relative;
+        // min-width: 720px;
+    }
+
 }
 
 // Keyframes
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
