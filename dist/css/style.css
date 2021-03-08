@@ -38,7 +38,8 @@ body {
   width: 100%;
   display: grid;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  padding: 5% 5%; }
 
 .parallax-bg {
   background-image: url("../images/bg.jpg");
@@ -59,7 +60,6 @@ body {
 #hero .container {
   height: 100vh;
   animation: fadein 2s;
-  padding: 0 5%;
   grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr)); }
 
 #hero .cta {
@@ -81,7 +81,6 @@ body {
   padding: 2rem 4.5rem; }
 
 #email-ribbon .container {
-  padding: 5% 5%;
   min-height: 30vh;
   animation: fadein 2.3s;
   background: #ff9966;
@@ -93,6 +92,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
+  @media only screen and (max-width: 600px) {
+    #email-ribbon .container {
+      min-height: 50vh;
+      text-align: center; } }
 
 #email-ribbon h2 {
   margin: 0 1rem 0 0; }
@@ -105,6 +108,9 @@ body {
   border: .1rem solid black;
   letter-spacing: .2rem;
   background-color: rgba(255, 255, 255, 0.3); }
+  @media only screen and (max-width: 600px) {
+    #email-ribbon input {
+      margin-top: -5rem; } }
 
 #email-ribbon input::placeholder {
   color: rgba(53, 53, 53, 0.7); }
@@ -122,6 +128,26 @@ body {
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: .1rem; }
+  @media only screen and (max-width: 600px) {
+    #email-ribbon .subscribe-button {
+      margin-top: -7rem; } }
+
+#email-numbers-text .container {
+  min-height: 30vh;
+  animation: fadein 2.3s;
+  background: #FDFDFD;
+  /* fallback for old browsers */
+  display: block;
+  text-align: center;
+  padding: 5% 25%; }
+  @media only screen and (max-width: 600px) {
+    #email-numbers-text .container {
+      min-height: 50vh;
+      padding: 5% 10%; } }
+
+#email-numbers-text p {
+  font-size: 2.5rem;
+  color: black; }
 
 @keyframes fadein {
   from {

@@ -31,6 +31,7 @@ body { font-size: 2rem; }
     display: grid;
     align-items: center; // Cross Axis
     justify-content: center; // Normal Axis
+    padding: 5% 5%;
 }
 
 .parallax-bg {
@@ -61,7 +62,6 @@ body { font-size: 2rem; }
     .container {
         height: 100vh; //is this gonna get wonky
         animation: fadein 2s;
-        padding: 0 5%;
         grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr)); //repeat(num_cols_that_can_fit, 24rem -> 1 whole item on whatever screen size is >240px.)
     }
 
@@ -98,7 +98,6 @@ body { font-size: 2rem; }
 #email-ribbon {
 
     .container {
-        padding: 5% 5%;
         min-height: 30vh;
         animation: fadein 2.3s;
         background: #ff9966;  /* fallback for old browsers */
@@ -107,6 +106,11 @@ body { font-size: 2rem; }
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+
+        @media only screen and (max-width: 600px) {
+            min-height: 50vh;
+            text-align:  center;
+          }
     }
 
     h2 {
@@ -121,6 +125,9 @@ body { font-size: 2rem; }
         border: .1rem solid black;
         letter-spacing: .2rem;
         background-color: rgba(255, 255, 255, .3);
+        @media only screen and (max-width: 600px) {
+            margin-top: -5rem;
+        }
     }
 
     input::placeholder{
@@ -144,7 +151,34 @@ body { font-size: 2rem; }
         font-size: 2rem;
         text-transform: uppercase;
         letter-spacing: .1rem;
+        @media only screen and (max-width: 600px) {
+            margin-top: -7rem;
+        }
     }
+}
+
+#email-numbers-text {
+
+    .container {
+        min-height: 30vh;
+        animation: fadein 2.3s;
+        background: #FDFDFD;  /* fallback for old browsers */
+        display: block;
+        text-align:  center;
+        padding: 5% 25%;
+
+        @media only screen and (max-width: 600px) {
+            min-height: 50vh;
+            padding: 5% 10%;
+
+          }
+    }
+
+    p {
+        font-size: 2.5rem;
+        color: black;
+    }
+
 }
 
 // Keyframes
